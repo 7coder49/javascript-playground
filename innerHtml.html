@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>INNER HTML</title>
+        <style>
+           
+        </style>
+        <script>
+            console.log('HHHHHHHHHHHHHHHH')
+            
+            const attatchList = ()=>{
+                setTimeout(()=>{
+                    const container= document.getElementById('container');
+
+                    container.innerHTML = `
+                    <ul>
+                        <li>Apple</li>
+                        <li>Orange</li>
+                        <li>Grapes</li>
+                    </ul>
+                })
+                `
+            }, 1000)
+
+            const text = document.getElementById('text');
+            text.addEventListener("selectstart", (e) => {
+                e.preventDefault();
+            });
+
+            }
+
+            const removeList=()=>{
+                const container= document.getElementById('container');
+
+                container.innerHTML = ``
+            }
+
+            const addText=()=>{
+                const container= document.getElementById('container');
+                container.innerText = "Hello World"
+            }
+            document.addEventListener('DOMContentLoaded'
+            , attatchList)
+        </script>
+    </head>
+    <body>
+        <h1 hidden>Ayyanar</h1>
+        <img src="cat.jpg" id="img">
+        <p id="text">Try selecting me</p>
+
+        <button onclick="attatchList()">Add List</button>
+        <button onclick="removeList()">Remove Ice</button>
+        <button onclick="addText()">Add Text</button>
+        <div id="container">
+           
+        </div>
+         <form>
+        <label>Name:</label>
+        <input type="text" name="username">
+
+        <button type="submit">Submit</button>
+    </form>
+    </body>
+</html>

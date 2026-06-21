@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Animation Example</title>
+    <style>
+        body {
+            margin: 50px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation: moveRight 2s infinite alternate;
+        }
+
+        @keyframes moveRight {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(300px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>CSS Animation Demo</h2>
+
+    <div class="box"></div>
+</body>
+</html>
